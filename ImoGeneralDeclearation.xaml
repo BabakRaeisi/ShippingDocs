@@ -1,0 +1,109 @@
+﻿<Window x:Class="PishgamanFormsAssistant.ImoGeneralDeclearation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="Imo General Declearation" Height="825.6" Width="1446.8" ResizeMode="NoResize" WindowStyle="None"  Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid Background="LightGray" Height="826" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1447" Margin="0,0,-0.2,-0.4">
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF3372B9" MouseDown="Grid_MouseDown">
+            <TextBlock Text="اظهارنامه كلی" FontFamily="Garamond" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        </Grid>
+
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="5" Margin="102,181,0,0" VerticalAlignment="Top" Width="0"/>
+
+
+        <Label Margin="1000,65,71,416">
+            <materialDesign:PackIcon Kind="Transcribe"  Height="335" Width="366" Foreground="#FF7C9CC1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        </Label>
+
+
+
+        <Grid HorizontalAlignment="Left" Height="761" Margin="-10,65,0,0" VerticalAlignment="Top" Width="1447">
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="CALL SIGN :" Height="30" Margin="285,132,1078,599" Foreground="#FF395288" FontWeight="Bold" Width="77"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="NAME OF SHIP :" Height="30" Margin="51,93,1285,638" Foreground="#FF395288" FontWeight="Bold" Width="104"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="IMO no. :" Height="30" Margin="298,93,1056,638" Foreground="#FF395288" FontWeight="Bold" Width="86"/>
+
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Port arrived from/ port of destination:" Height="30" Margin="54,397,1142,334" Foreground="#FF395288" FontWeight="Bold" Width="244"/>
+
+
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Flag of ship :" Height="30" Margin="51,138,1291,593" Foreground="#FF395288" FontWeight="Bold" Width="98"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Master's name :" Height="30" Margin="264,176,1078,555" Foreground="#FF395288" FontWeight="Bold" Width="98"/>
+
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of arrival :" Height="30" Margin="54,286,1291,445" Foreground="#FF395288" FontWeight="Bold" Width="95"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of destination :" Height="30" Margin="322,286,995,445" Foreground="#FF395288" FontWeight="Bold" Width="123"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="date of arrival/departure :" Height="30" Margin="290,316,990,415" Foreground="#FF395288" FontWeight="Bold" Width="160"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="certificate of registry (port,date,number) :" Height="30" Margin="51,597,1142,134" Foreground="#FF395288" FontWeight="Bold" Width="247"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="gross (tonnage) :" Height="30" Margin="54,520,1280,211" Foreground="#FF395288" FontWeight="Bold" Width="106"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="name and information of ship's agent :" Height="30" Margin="51,211,1155,520" Foreground="#FF395288" FontWeight="Bold" Width="234"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="position of ship in port :" Height="30" Margin="54,438,1237,293" Foreground="#FF395288" FontWeight="Bold" Width="149"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="net tonnage :" Height="30" Margin="383,0,967,211" Foreground="#FF395288" FontWeight="Bold" Width="90"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="brife description cargo :" Height="30" Margin="54,556,1240,175" Foreground="#FF395288" FontWeight="Bold" Width="146"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="ship's stores declaration:" Height="30" Margin="750,138,525,593" Foreground="#FF395288" FontWeight="Bold" Width="165"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="cargo declaration:" Height="30" Margin="1102,138,227,593" Foreground="#FF395288" FontWeight="Bold" Width="111"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="attached documents page:" Height="30" Margin="750,88,525,643" Foreground="#FF395288" FontWeight="Bold" Width="165"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="remarks :" Height="30" Margin="54,643,1322,88" Foreground="#FF395288" FontWeight="Bold" Width="64"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="number of crew :" Height="30" Margin="383,479,946,252" Foreground="#FF395288" FontWeight="Bold" Width="111"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="number of passenger :" Height="30" Margin="54,473,1248,258" Foreground="#FF395288" FontWeight="Bold" Width="138"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="crew list page :" Height="30" Margin="1102,182,227,549" Foreground="#FF395288" FontWeight="Bold" Width="111"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="brife particulars of voyage :" Height="30" Margin="54,357,1211,374" Foreground="#FF395288" FontWeight="Bold" Width="175"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="The ship's requirements in terms of waste and residue reception Facilities :" Height="30" Margin="750,397,257,334" Foreground="#FF395288" FontWeight="Bold" Width="433"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="crew's effect declaration :" Height="30" Margin="755,233,531,498" Foreground="#FF395288" FontWeight="Bold" Width="154" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.746"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="passenger list page :" Height="30" Margin="755,182,557,549" Foreground="#FF395288" FontWeight="Bold" Width="128"/>
+            <TextBox x:Name="nameship_text" TabIndex="3" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="160,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="#FFF6EDED"/>
+            <TextBox x:Name="flag_text" TabIndex="4" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="160,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56" Background="#FFF6EDED"/>
+            <TextBox x:Name="imo_text" TabIndex="5" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="367,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Background="#FFF6EDED"/>
+            <TextBox x:Name="call_sign_text" TabIndex="6" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="367,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="109" Background="#FFF6EDED"/>
+            <TextBox x:Name="porta_text" FlowDirection="RightToLeft" TabIndex="10" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="149,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="portd_text" TabIndex="11"  FlowDirection="RightToLeft" MaxLength="50"  HorizontalAlignment="Left" Height="24" Margin="450,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="141" Background="#FFF6EDED"/>
+            <TextBox x:Name="brife_text" MaxLength="50" TabIndex="13" HorizontalAlignment="Left" Height="24" Margin="229,357,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="362" Background="#FFF6EDED"/>
+            <TextBox x:Name="master_text" FlowDirection="RightToLeft" TabIndex="8" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="367,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Background="#FFF6EDED"/>
+            <TextBox x:Name="dateAD_text" TabIndex="12" FlowDirection="RightToLeft" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="455,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="registry_text" TabIndex="21" FlowDirection="RightToLeft" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="303,597,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288" Background="#FFF6EDED"/>
+            <TextBox x:Name="gross_text"  MaxLength="50" TabIndex="18" HorizontalAlignment="Left" Height="24" Margin="183,520,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" Background="#FFF6EDED"/>
+            <TextBox x:Name="agent_text"  FlowDirection="RightToLeft" TabIndex="9"  HorizontalAlignment="Left" Height="24" Margin="304,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="288" Background="#FFF6EDED"/>
+            <TextBox x:Name="shipposition_text" TabIndex="15" FlowDirection="RightToLeft" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="208,442,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="293" Background="#FFF6EDED"/>
+            <TextBox x:Name="nettonnage_text" TabIndex="19"  MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="478,520,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="113" Background="#FFF6EDED"/>
+            <TextBox x:Name="brifeCargo_text" TabIndex="20" FlowDirection="RightToLeft" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="208,556,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="383" Background="#FFF6EDED"/>
+            <TextBox x:Name="portDeparture_text" TabIndex="14" FlowDirection="RightToLeft" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="285,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="306" Background="#FFF6EDED"/>
+            <TextBox x:Name="passenger_num_tetxt" TabIndex="16" MaxLength="10" HorizontalAlignment="Left" Height="24" Margin="208,479,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Background="#FFF6EDED"/>
+            <TextBox x:Name="remark_tetxt" TabIndex="21" FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="30" Margin="134,643,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="457" Background="#FFF6EDED"/>
+            <TextBox x:Name="attachedDocpage_text" TabIndex="22" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="925,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Background="#FFF6EDED"/>
+            <TextBox x:Name="requirement_tetxt" TabIndex="28" FlowDirection="RightToLeft" HorizontalAlignment="Left" Height="34" Margin="904,432,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="449" Background="#FFF6EDED"/>
+            <TextBox x:Name="numCrew_text" MaxLength="50" TabIndex="17" HorizontalAlignment="Left" Height="24" Margin="499,479,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" Background="#FFF6EDED"/>
+            <TextBox x:Name="cargoDEclaration_text" MaxLength="50" TabIndex="24" HorizontalAlignment="Left" Height="24" Margin="1218,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" Background="#FFF6EDED"/>
+            <TextBox x:Name="storedeclaration_text" MaxLength="50" TabIndex="23" HorizontalAlignment="Left" Height="24" Margin="925,138,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Background="#FFF6EDED"/>
+            <TextBox x:Name="crewlist_text" TabIndex="26" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="1218,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" Background="#FFF6EDED"/>
+            <TextBox x:Name="passengerlistpage_text" MaxLength="50" TabIndex="25" HorizontalAlignment="Left" Height="24" Margin="925,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Background="#FFF6EDED"/>
+            <TextBox x:Name="effect_tetxt" MaxLength="50" TabIndex="26" HorizontalAlignment="Left" Height="24" Margin="925,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" Background="#FFF6EDED"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content=" Maritime Declaration of Health  :" Height="30" Margin="750,304,486,427" Foreground="#FF395288" FontWeight="Bold" Width="204" RenderTransformOrigin="0.5,0.5">
+            </Label>
+            <TextBox x:Name="maritime_tetxt" MaxLength="50" TabIndex="27" HorizontalAlignment="Left" Height="24" Margin="959,304,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="126" Background="#FFF6EDED"/>
+            <Button Click="Button_Click_2" Content="Delete pervious information" Margin="725,643,486,60" Height="Auto" />
+            <Label x:Name="label" Content="Indicate page number related to each document mentioned bellow. " HorizontalAlignment="Left" Margin="754,28,0,0" VerticalAlignment="Top" Width="433" Foreground="#DD545151" FontStyle="Italic" FontWeight="Bold"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content=" voyage no.:" Height="30" Margin="55,173,1294,558" Foreground="#FF395288" FontWeight="Bold" Width="98"/>
+            <TextBox x:Name="voyage_num_txt" MaxLength="50" TabIndex="7" HorizontalAlignment="Left" Height="24" Margin="158,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56" Background="#FFF6EDED"/>
+
+        </Grid>
+
+
+        <Button  Margin="1032,707,233,59" Content="Submit" Height="Auto" Click="Button_Click_1" />
+        <Button Content="close" Margin="1301,707,42,59" Click="Button_Click" Height="Auto"/>
+        <CheckBox x:Name="Dcheck" TabIndex="1" Content="Departure" HorizontalAlignment="Left" Height="30" Margin="132,106,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF395288" FontWeight="Bold"/>
+        <CheckBox x:Name="Acheck" TabIndex="2" Content="Arrival" HorizontalAlignment="Left" Height="30" Margin="247,106,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF395288" FontWeight="Bold"/>
+        <TextBox x:Name="ADtxt" HorizontalAlignment="Left" Height="23" Margin="342,113,0,0" TextWrapping="Wrap" Visibility="Hidden" Text="" VerticalAlignment="Top" Width="36"/>
+        <Image x:Name="imageDel" HorizontalAlignment="Left" Source="img\DELETE.png" Visibility="Hidden" Height="43" VerticalAlignment="Top" Width="38" Margin="953,721,0,0"/>
+        <Image x:Name="imagSub" HorizontalAlignment="Left" Height="60" Margin="1219,707,0,0" VerticalAlignment="Top" Width="54" Visibility="Hidden" Source="img\TICK.png"/>
+    </Grid>
+</Window>

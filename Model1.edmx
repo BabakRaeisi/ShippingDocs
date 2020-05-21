@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_bill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bl_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipper_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipper_tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipper_adr" Type="nvarchar(max)" />
+          <Property Name="consignee_name " Type="nvarchar" MaxLength="50" />
+          <Property Name="consignee_tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="notify_adr" Type="nvarchar(max)" />
+          <Property Name="vessel" Type="nvarchar" MaxLength="50" />
+          <Property Name="voyage_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="port_del" Type="nvarchar" MaxLength="50" />
+          <Property Name="port_load" Type="nvarchar" MaxLength="50" />
+          <Property Name="port_dis" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipper_good" Type="nvarchar(max)" />
+          <Property Name="gross" Type="nvarchar" MaxLength="50" />
+          <Property Name="time_used" Type="nvarchar" MaxLength="50" />
+          <Property Name="place_issue" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_agent_dis" Type="nvarchar" MaxLength="50" />
+          <Property Name="agent_dis_add" Type="nvarchar(max)" />
+          <Property Name="phone_tel" Type="nvarchar(max)" />
+          <Property Name="cpt" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="alaem_va_shomareha" Type="nvarchar" MaxLength="50" />
+          <Property Name="kala_girande" Type="nvarchar" MaxLength="50" />
+          <Property Name="andaze" Type="nvarchar" MaxLength="50" />
+          <Property Name="noe_baste" Type="nvarchar" MaxLength="50" />
+          <Property Name="vazn_nakhales" Type="float" />
+          <Property Name="tedad" Type="int" />
+          <Property Name="vazn_unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="sharh_kala" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_CargoInf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="call_sign" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_ship" Type="nvarchar" MaxLength="50" />
+          <Property Name="imo_number" Type="int" />
+          <Property Name="port_report" Type="nvarchar" MaxLength="50" />
+          <Property Name="flag_ship" Type="nvarchar" MaxLength="50" />
+          <Property Name="masters_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="portOfLoading" Type="nvarchar" MaxLength="50" />
+          <Property Name="portOfDischarge" Type="nvarchar" MaxLength="50" />
+          <Property Name="ArrivalDeparture" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_crw">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="ranking" Type="nvarchar" MaxLength="50" />
+          <Property Name="nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="cdc_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="cdc_exp" Type="nvarchar" MaxLength="50" />
+          <Property Name="passport_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="passport_exp" Type="nvarchar" MaxLength="50" />
+          <Property Name="date_birth" Type="nvarchar" MaxLength="50" />
+          <Property Name="birthplace" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_crwInf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="call_signcrw" Type="nvarchar" MaxLength="50" />
+          <Property Name="name_shipcrw" Type="nvarchar" MaxLength="50" />
+          <Property Name="voyage_crw" Type="nvarchar" MaxLength="50" />
+          <Property Name="port_arr_dep" Type="nvarchar" MaxLength="50" />
+          <Property Name="flag_crw" Type="nvarchar" MaxLength="50" />
+          <Property Name="imo_crw" Type="nvarchar" MaxLength="50" />
+          <Property Name="lastReportCall_crw" Type="nvarchar" MaxLength="50" />
+          <Property Name="date_arr_depar" Type="nvarchar" MaxLength="50" />
+          <Property Name="crw_arr_depar" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_deliverygrid">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="container_marks" Type="nvarchar" MaxLength="50" />
+          <Property Name="des_goods" Type="nvarchar(max)" />
+          <Property Name="gross" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_deliveryinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date" Type="nvarchar" MaxLength="50" />
+          <Property Name="BL_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="director" Type="nvarchar(max)" />
+          <Property Name="final_destination" Type="nvarchar" MaxLength="50" />
+          <Property Name="vessel" Type="nvarchar" MaxLength="50" />
+          <Property Name="voyage" Type="nvarchar" MaxLength="50" />
+          <Property Name="good_des" Type="nvarchar(max)" />
+          <Property Name="gross_unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="delivery_exp" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_ImoGen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameship" Type="nvarchar" MaxLength="50" />
+          <Property Name="ArrDepa" Type="nvarchar" MaxLength="50" />
+          <Property Name="flag" Type="nvarchar" MaxLength="50" />
+          <Property Name="imo_num" Type="nvarchar" MaxLength="50" />
+          <Property Name="callsign" Type="nvarchar" MaxLength="50" />
+          <Property Name="master_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="agent_ship" Type="nvarchar(max)" />
+          <Property Name="portA" Type="nvarchar" MaxLength="50" />
+          <Property Name="portdes" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateAD" Type="nvarchar" MaxLength="50" />
+          <Property Name="brifeVoy" Type="nvarchar" MaxLength="50" />
+          <Property Name="arrivedDes" Type="nvarchar" MaxLength="50" />
+          <Property Name="position_ship" Type="nvarchar" MaxLength="50" />
+          <Property Name="passenger_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="crew_number" Type="nvarchar" MaxLength="50" />
+          <Property Name="gross_ton" Type="nvarchar" MaxLength="50" />
+          <Property Name="net_ton" Type="nvarchar" MaxLength="50" />
+          <Property Name="brife_cargo" Type="nvarchar" MaxLength="50" />
+          <Property Name="registry" Type="nvarchar" MaxLength="50" />
+          <Property Name="remarks" Type="nvarchar(max)" />
+          <Property Name="attached_doc" Type="nvarchar" MaxLength="50" />
+          <Property Name="ship_dec" Type="nvarchar" MaxLength="50" />
+          <Property Name="passenger_list" Type="nvarchar" MaxLength="50" />
+          <Property Name="cargo_dec" Type="nvarchar" MaxLength="50" />
+          <Property Name="crew_list" Type="nvarchar" MaxLength="50" />
+          <Property Name="crew_effect" Type="nvarchar" MaxLength="50" />
+          <Property Name="maritime_dec" Type="nvarchar" MaxLength="50" />
+          <Property Name="ships_req" Type="nvarchar(max)" />
+          <Property Name="voyage_num" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_InvInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="delivery" Type="nvarchar" MaxLength="50" />
+          <Property Name="vessel" Type="nvarchar" MaxLength="50" />
+          <Property Name="voyage" Type="int" />
+          <Property Name="invoice_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="date_inv" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_invoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="unitprice" Type="nvarchar" MaxLength="50" />
+          <Property Name="amount" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_manifest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BL_no" Type="nvarchar" MaxLength="50" />
+          <Property Name="weight" Type="float" />
+          <Property Name="weight_unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="mark_remark" Type="nvarchar" MaxLength="50" />
+          <Property Name="consignee" Type="nvarchar" MaxLength="50" />
+          <Property Name="shipper" Type="nvarchar" MaxLength="50" />
+          <Property Name="description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tbl_ManifestInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="maniMaster" Type="nvarchar" MaxLength="50" />
+          <Property Name="fromPortMani" Type="nvarchar" MaxLength="50" />
+          <Property Name="portofMani" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateMani" Type="nvarchar" MaxLength="50" />
+          <Property Name="voyage_mani" Type="nvarchar" MaxLength="50" />
+          <Property Name="general_mani" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="tbl_bill" EntityType="Self.tbl_bill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_cargo" EntityType="Self.tbl_cargo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_CargoInf" EntityType="Self.tbl_CargoInf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_crw" EntityType="Self.tbl_crw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_crwInf" EntityType="Self.tbl_crwInf" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_deliverygrid" EntityType="Self.tbl_deliverygrid" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_deliveryinfo" EntityType="Self.tbl_deliveryinfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ImoGen" EntityType="Self.tbl_ImoGen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_InvInfo" EntityType="Self.tbl_InvInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_invoice" EntityType="Self.tbl_invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_manifest" EntityType="Self.tbl_manifest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_ManifestInfo" EntityType="Self.tbl_ManifestInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_bill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bl_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipper_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipper_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipper_adr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="consignee_name_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="consignee_tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="notify_adr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="vessel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="voyage_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="port_del" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="port_load" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="port_dis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipper_good" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gross" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time_used" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="place_issue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_agent_dis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agent_dis_add" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="phone_tel" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cpt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_cargo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="alaem_va_shomareha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kala_girande" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="andaze" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="noe_baste" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vazn_nakhales" Type="Double" />
+          <Property Name="tedad" Type="Int32" />
+          <Property Name="vazn_unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sharh_kala" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_CargoInf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="call_sign" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_ship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imo_number" Type="Int32" />
+          <Property Name="port_report" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="flag_ship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="masters_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="portOfLoading" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="portOfDischarge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ArrivalDeparture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_crw">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ranking" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cdc_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cdc_exp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passport_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passport_exp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_birth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="birthplace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_crwInf">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="call_signcrw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name_shipcrw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="voyage_crw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="port_arr_dep" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="flag_crw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imo_crw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lastReportCall_crw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_arr_depar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="crw_arr_depar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_deliverygrid">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="container_marks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="des_goods" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gross" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_deliveryinfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BL_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="director" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="final_destination" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vessel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="voyage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="good_des" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="gross_unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="delivery_exp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_ImoGen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ArrDepa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imo_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="callsign" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="master_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="agent_ship" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="portA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="portdes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateAD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="brifeVoy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="arrivedDes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="position_ship" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passenger_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="crew_number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gross_ton" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="net_ton" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="brife_cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="registry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="attached_doc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ship_dec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passenger_list" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cargo_dec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="crew_list" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="crew_effect" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="maritime_dec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ships_req" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="voyage_num" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_InvInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="delivery" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vessel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="voyage" Type="Int32" />
+          <Property Name="invoice_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date_inv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_invoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="unitprice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tbl_manifest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BL_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="weight" Type="Double" />
+          <Property Name="weight_unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mark_remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="consignee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shipper" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_ManifestInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="maniMaster" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fromPortMani" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="portofMani" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateMani" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="voyage_mani" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="general_mani" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_bill" EntityType="Self.tbl_bill" />
+          <EntitySet Name="tbl_cargo" EntityType="Self.tbl_cargo" />
+          <EntitySet Name="tbl_CargoInf" EntityType="Self.tbl_CargoInf" />
+          <EntitySet Name="tbl_crw" EntityType="Self.tbl_crw" />
+          <EntitySet Name="tbl_crwInf" EntityType="Self.tbl_crwInf" />
+          <EntitySet Name="tbl_deliverygrid" EntityType="Self.tbl_deliverygrid" />
+          <EntitySet Name="tbl_deliveryinfo" EntityType="Self.tbl_deliveryinfo" />
+          <EntitySet Name="tbl_ImoGen" EntityType="Self.tbl_ImoGen" />
+          <EntitySet Name="tbl_InvInfo" EntityType="Self.tbl_InvInfo" />
+          <EntitySet Name="tbl_invoice" EntityType="Self.tbl_invoice" />
+          <EntitySet Name="tbl_manifest" EntityType="Self.tbl_manifest" />
+          <EntitySet Name="tbl_ManifestInfo" EntityType="Self.tbl_ManifestInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="tbl_bill">
+            <EntityTypeMapping TypeName="Database1Model.tbl_bill">
+              <MappingFragment StoreEntitySet="tbl_bill">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="bl_num" ColumnName="bl_num" />
+                <ScalarProperty Name="shipper_name" ColumnName="shipper_name" />
+                <ScalarProperty Name="shipper_tel" ColumnName="shipper_tel" />
+                <ScalarProperty Name="shipper_adr" ColumnName="shipper_adr" />
+                <ScalarProperty Name="consignee_name_" ColumnName="consignee_name " />
+                <ScalarProperty Name="consignee_tel" ColumnName="consignee_tel" />
+                <ScalarProperty Name="notify_adr" ColumnName="notify_adr" />
+                <ScalarProperty Name="vessel" ColumnName="vessel" />
+                <ScalarProperty Name="voyage_num" ColumnName="voyage_num" />
+                <ScalarProperty Name="port_del" ColumnName="port_del" />
+                <ScalarProperty Name="port_load" ColumnName="port_load" />
+                <ScalarProperty Name="port_dis" ColumnName="port_dis" />
+                <ScalarProperty Name="shipper_good" ColumnName="shipper_good" />
+                <ScalarProperty Name="gross" ColumnName="gross" />
+                <ScalarProperty Name="time_used" ColumnName="time_used" />
+                <ScalarProperty Name="place_issue" ColumnName="place_issue" />
+                <ScalarProperty Name="name_agent_dis" ColumnName="name_agent_dis" />
+                <ScalarProperty Name="agent_dis_add" ColumnName="agent_dis_add" />
+                <ScalarProperty Name="phone_tel" ColumnName="phone_tel" />
+                <ScalarProperty Name="cpt" ColumnName="cpt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_cargo">
+            <EntityTypeMapping TypeName="Database1Model.tbl_cargo">
+              <MappingFragment StoreEntitySet="tbl_cargo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="alaem_va_shomareha" ColumnName="alaem_va_shomareha" />
+                <ScalarProperty Name="kala_girande" ColumnName="kala_girande" />
+                <ScalarProperty Name="andaze" ColumnName="andaze" />
+                <ScalarProperty Name="noe_baste" ColumnName="noe_baste" />
+                <ScalarProperty Name="vazn_nakhales" ColumnName="vazn_nakhales" />
+                <ScalarProperty Name="tedad" ColumnName="tedad" />
+                <ScalarProperty Name="vazn_unit" ColumnName="vazn_unit" />
+                <ScalarProperty Name="sharh_kala" ColumnName="sharh_kala" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CargoInf">
+            <EntityTypeMapping TypeName="Database1Model.tbl_CargoInf">
+              <MappingFragment StoreEntitySet="tbl_CargoInf">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="call_sign" ColumnName="call_sign" />
+                <ScalarProperty Name="name_ship" ColumnName="name_ship" />
+                <ScalarProperty Name="imo_number" ColumnName="imo_number" />
+                <ScalarProperty Name="port_report" ColumnName="port_report" />
+                <ScalarProperty Name="flag_ship" ColumnName="flag_ship" />
+                <ScalarProperty Name="masters_name" ColumnName="masters_name" />
+                <ScalarProperty Name="portOfLoading" ColumnName="portOfLoading" />
+                <ScalarProperty Name="portOfDischarge" ColumnName="portOfDischarge" />
+                <ScalarProperty Name="ArrivalDeparture" ColumnName="ArrivalDeparture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_crw">
+            <EntityTypeMapping TypeName="Database1Model.tbl_crw">
+              <MappingFragment StoreEntitySet="tbl_crw">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ranking" ColumnName="ranking" />
+                <ScalarProperty Name="nationality" ColumnName="nationality" />
+                <ScalarProperty Name="cdc_num" ColumnName="cdc_num" />
+                <ScalarProperty Name="cdc_exp" ColumnName="cdc_exp" />
+                <ScalarProperty Name="passport_num" ColumnName="passport_num" />
+                <ScalarProperty Name="passport_exp" ColumnName="passport_exp" />
+                <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+                <ScalarProperty Name="birthplace" ColumnName="birthplace" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_crwInf">
+            <EntityTypeMapping TypeName="Database1Model.tbl_crwInf">
+              <MappingFragment StoreEntitySet="tbl_crwInf">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="call_signcrw" ColumnName="call_signcrw" />
+                <ScalarProperty Name="name_shipcrw" ColumnName="name_shipcrw" />
+                <ScalarProperty Name="voyage_crw" ColumnName="voyage_crw" />
+                <ScalarProperty Name="port_arr_dep" ColumnName="port_arr_dep" />
+                <ScalarProperty Name="flag_crw" ColumnName="flag_crw" />
+                <ScalarProperty Name="imo_crw" ColumnName="imo_crw" />
+                <ScalarProperty Name="lastReportCall_crw" ColumnName="lastReportCall_crw" />
+                <ScalarProperty Name="date_arr_depar" ColumnName="date_arr_depar" />
+                <ScalarProperty Name="crw_arr_depar" ColumnName="crw_arr_depar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_deliverygrid">
+            <EntityTypeMapping TypeName="Database1Model.tbl_deliverygrid">
+              <MappingFragment StoreEntitySet="tbl_deliverygrid">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="container_marks" ColumnName="container_marks" />
+                <ScalarProperty Name="des_goods" ColumnName="des_goods" />
+                <ScalarProperty Name="gross" ColumnName="gross" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_deliveryinfo">
+            <EntityTypeMapping TypeName="Database1Model.tbl_deliveryinfo">
+              <MappingFragment StoreEntitySet="tbl_deliveryinfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="BL_no" ColumnName="BL_no" />
+                <ScalarProperty Name="director" ColumnName="director" />
+                <ScalarProperty Name="final_destination" ColumnName="final_destination" />
+                <ScalarProperty Name="vessel" ColumnName="vessel" />
+                <ScalarProperty Name="voyage" ColumnName="voyage" />
+                <ScalarProperty Name="good_des" ColumnName="good_des" />
+                <ScalarProperty Name="gross_unit" ColumnName="gross_unit" />
+                <ScalarProperty Name="delivery_exp" ColumnName="delivery_exp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ImoGen">
+            <EntityTypeMapping TypeName="Database1Model.tbl_ImoGen">
+              <MappingFragment StoreEntitySet="tbl_ImoGen">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="nameship" ColumnName="nameship" />
+                <ScalarProperty Name="ArrDepa" ColumnName="ArrDepa" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="imo_num" ColumnName="imo_num" />
+                <ScalarProperty Name="callsign" ColumnName="callsign" />
+                <ScalarProperty Name="master_name" ColumnName="master_name" />
+                <ScalarProperty Name="agent_ship" ColumnName="agent_ship" />
+                <ScalarProperty Name="portA" ColumnName="portA" />
+                <ScalarProperty Name="portdes" ColumnName="portdes" />
+                <ScalarProperty Name="dateAD" ColumnName="dateAD" />
+                <ScalarProperty Name="brifeVoy" ColumnName="brifeVoy" />
+                <ScalarProperty Name="arrivedDes" ColumnName="arrivedDes" />
+                <ScalarProperty Name="position_ship" ColumnName="position_ship" />
+                <ScalarProperty Name="passenger_number" ColumnName="passenger_number" />
+                <ScalarProperty Name="crew_number" ColumnName="crew_number" />
+                <ScalarProperty Name="gross_ton" ColumnName="gross_ton" />
+                <ScalarProperty Name="net_ton" ColumnName="net_ton" />
+                <ScalarProperty Name="brife_cargo" ColumnName="brife_cargo" />
+                <ScalarProperty Name="registry" ColumnName="registry" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+                <ScalarProperty Name="attached_doc" ColumnName="attached_doc" />
+                <ScalarProperty Name="ship_dec" ColumnName="ship_dec" />
+                <ScalarProperty Name="passenger_list" ColumnName="passenger_list" />
+                <ScalarProperty Name="cargo_dec" ColumnName="cargo_dec" />
+                <ScalarProperty Name="crew_list" ColumnName="crew_list" />
+                <ScalarProperty Name="crew_effect" ColumnName="crew_effect" />
+                <ScalarProperty Name="maritime_dec" ColumnName="maritime_dec" />
+                <ScalarProperty Name="ships_req" ColumnName="ships_req" />
+                <ScalarProperty Name="voyage_num" ColumnName="voyage_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_InvInfo">
+            <EntityTypeMapping TypeName="Database1Model.tbl_InvInfo">
+              <MappingFragment StoreEntitySet="tbl_InvInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="delivery" ColumnName="delivery" />
+                <ScalarProperty Name="vessel" ColumnName="vessel" />
+                <ScalarProperty Name="voyage" ColumnName="voyage" />
+                <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+                <ScalarProperty Name="date_inv" ColumnName="date_inv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_invoice">
+            <EntityTypeMapping TypeName="Database1Model.tbl_invoice">
+              <MappingFragment StoreEntitySet="tbl_invoice">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="unitprice" ColumnName="unitprice" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_manifest">
+            <EntityTypeMapping TypeName="Database1Model.tbl_manifest">
+              <MappingFragment StoreEntitySet="tbl_manifest">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BL_no" ColumnName="BL_no" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="weight_unit" ColumnName="weight_unit" />
+                <ScalarProperty Name="mark_remark" ColumnName="mark_remark" />
+                <ScalarProperty Name="consignee" ColumnName="consignee" />
+                <ScalarProperty Name="shipper" ColumnName="shipper" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ManifestInfo">
+            <EntityTypeMapping TypeName="Database1Model.tbl_ManifestInfo">
+              <MappingFragment StoreEntitySet="tbl_ManifestInfo">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="maniMaster" ColumnName="maniMaster" />
+                <ScalarProperty Name="fromPortMani" ColumnName="fromPortMani" />
+                <ScalarProperty Name="portofMani" ColumnName="portofMani" />
+                <ScalarProperty Name="DateMani" ColumnName="DateMani" />
+                <ScalarProperty Name="voyage_mani" ColumnName="voyage_mani" />
+                <ScalarProperty Name="general_mani" ColumnName="general_mani" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

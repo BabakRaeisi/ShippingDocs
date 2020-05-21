@@ -1,0 +1,1233 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <MS_x0020_SQL Ref="2" type="Stimulsoft.Report.Dictionary.StiSqlDatabase" isKey="true">
+        <Alias>MS SQL</Alias>
+        <ConnectionStringEncrypted>9GifyWFXE5nsR83w8RxlL8TI9QlhTJPI4UbVmGBMZS/FVPcrzlnSGe9G9YD1XONumHjLLk55AfH4YbmETVzgn9NWqwjdegGZ+mT5+PVEbSrReEGjTU1CheETpczhTCFj0WC1CE95oxn1R6WY5HHpf9ES+4hLXbNRa0m56GJMojPDFHUITVXjxeFH3dxydK674WD368h80wlrW+2hanCxCw==</ConnectionStringEncrypted>
+        <Name>MS SQL</Name>
+      </MS_x0020_SQL>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <DataSource1 Ref="3" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource1</Alias>
+        <Columns isList="true" count="4">
+          <value>quantity,System.Int32</value>
+          <value>description,System.String</value>
+          <value>unitprice,System.String</value>
+          <value>amount,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource1</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT tbl_invoice.quantity,tbl_invoice.description,
+tbl_invoice.unitprice,tbl_invoice.amount
+FROM tbl_invoice</SqlCommand>
+      </DataSource1>
+      <DataSource2 Ref="4" type="Stimulsoft.Report.Dictionary.StiSqlSource" isKey="true">
+        <Alias>DataSource2</Alias>
+        <Columns isList="true" count="5">
+          <value>date_inv,System.String</value>
+          <value>delivery,System.String</value>
+          <value>Invoice_no,System.String</value>
+          <value>vessel,System.String</value>
+          <value>voyage,System.Int32</value>
+        </Columns>
+        <CommandTimeout>30</CommandTimeout>
+        <Dictionary isRef="1" />
+        <Name>DataSource2</Name>
+        <NameInSource>MS SQL</NameInSource>
+        <Parameters isList="true" count="0" />
+        <SqlCommand>SELECT tbl_InvInfo.delivery, tbl_InvInfo.vessel, tbl_InvInfo.Invoice_no,
+  tbl_InvInfo.date_inv,tbl_invInfo.voyage
+FROM tbl_InvInfo</SqlCommand>
+      </DataSource2>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
+          <Brush>EmptyBrush</Brush>
+          <ClientRectangle>0,0.4,19,8.4</ClientRectangle>
+          <Components isList="true" count="15">
+            <Text1 Ref="7" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.6,1.4,8.8,1.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,48</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>INVOICE</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text4 Ref="8" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.6,7.8,2.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,16</Font>
+              <Guid>bba01c137e7b43fd8bf0c75da228430c</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>َAmount</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="9" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.2,7.8,2.4,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,16</Font>
+              <Guid>f3f843555a3842be85854384d580944a</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>َUnit Price</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text6 Ref="10" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3,7.8,11,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,16</Font>
+              <Guid>58edff897c3a4218983f4b11528507b8</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>َDescription</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text7 Ref="11" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,7.8,2.8,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,16</Font>
+              <Guid>220a67ad52034108a0e3fcaf6cf287ac</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>َQuantity</Text>
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text2 Ref="12" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,4,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource2.delivery}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text8 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,5.2,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource2.vessel}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Text9 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,4,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource2.Invoice_no}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="15" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>11.4,5.2,4.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource2.date_inv}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="16" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,4,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Delivery :</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text14 Ref="17" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>10,5.2,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>4e78ea215da040e8aaa6af83251d199e</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Date :</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text15 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.4,6.4,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>b605ee7b1b0f4403bc97ac0fbb75d2ca</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Voyage :</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text16 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>3.2,6.4,4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10,Bold| Italic</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource2.voyage}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text16>
+            <Text18 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.6,5.2,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>ff72641790ea46ff8109a31a9f7f2259</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Vessel :</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+            <Text20 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9,4,2.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,11</Font>
+              <Guid>8d7f12c6d28c4f7f95793194466bfdfb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>Invoice no. :</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text20>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageHeaderBand1>
+        <PageFooterBand1 Ref="22" type="PageFooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,26.5,19,1.2</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text3 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.2,0.6,1.2,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Aldhabi,16</Font>
+              <Guid>945e4ed1e4dc43bcb992f275f8e67290</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text3</Name>
+              <Page isRef="5" />
+              <Parent isRef="22" />
+              <TextBrush>[79:129:189]</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text3>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>PageFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </PageFooterBand1>
+        <DataDataSource1 Ref="24" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.6,19,0.8</ClientRectangle>
+          <Components isList="true" count="4">
+            <DataDataSource1_quantity Ref="25" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_quantity</Name>
+              <Page isRef="5" />
+              <Parent isRef="24" />
+              <Text>{DataSource1.quantity}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_quantity>
+            <DataDataSource1_description Ref="26" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.8,0,11.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_description</Name>
+              <Page isRef="5" />
+              <Parent isRef="24" />
+              <Text>{DataSource1.description}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_description>
+            <DataDataSource1_unitprice Ref="27" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.2,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_unitprice</Name>
+              <Page isRef="5" />
+              <Parent isRef="24" />
+              <Text>{DataSource1.unitprice}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_unitprice>
+            <DataDataSource1_amount Ref="28" type="Text" isKey="true">
+              <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.6,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataDataSource1_amount</Name>
+              <Page isRef="5" />
+              <Parent isRef="24" />
+              <Text>{DataSource1.amount}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataDataSource1_amount>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName>DataSource1</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataDataSource1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </DataDataSource1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>5ff05805e14e4ce18c58e12c24dbfef1</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <PaperSize>A4</PaperSize>
+      <Report isRef="0" />
+      <Watermark Ref="29" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <ImageBytes>/9j/4AAQSkZJRgABAQEA8ADwAAD/4QBaRXhpZgAATU0AKgAAAAgAAgESAAMAAAABAAEAAIdpAAQA
+AAABAAAAJgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAACYKADAAQAAAABAAACYAAAAAAAAP/t
+ACxQaG90b3Nob3AgMy4wADhCSU0EJQAAAAAAENQdjNmPALIE6YAJmOz4Qn7/2wBDAAIBAQIBAQIC
+AgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/
+2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
+DAwMDAwMDAwMDAz/wAARCAJgAmADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQF
+BgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS
+0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4
+eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi
+4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREA
+AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl
+8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImK
+kpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP0
+9fb3+Pn6/9oADAMBAAIRAxEAPwD98/7Nh/54LSfZI/8An3q1RQBV+yR/8+9H2SP/AJ96tUUAVfsk
+f/PvR9kj/wCferVFAEf2VPSj7KnpUlFAEf2VPSnfL/s06igAooooAKKKKACiiigAooooAKKKKACi
+iigAqP7NH/dqSigCP7NH/do+zR/3akooAj+zR/3ah+yR/wDPvVqigCr9kj/596Pskf8Az71aooAr
+/wBm2/8AzxWm/wBlW/8AzwWrVM8ge9AEH9lW/wDzwWk/sy2/597f8v8A61W6KAKn9mW3/Pvb/l/9
+aj+y7b/n3t/y/wDrVbpggAxy3HP3iKAIP7Jt/wDn2g/L/wCtTv7Jt/8AnitWKKAK/wDZdv8A88lp
+fsEX/PJPzqeigCD7BF/zyT86PsEX/PJPzqeigCubCID/AFK/nUn2aP8Au1JSFQ3WgBn2aP8Au0fZ
+o/7tDw4HFSUAR/Zo/wC7UlFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAEf2aP8Au0fZo/7tSUUA
+R/Zo/wC7R9mj/u1JRQBV+yR/8+9H2SP/AJ96tUUAVfskf/PvR9kj/wCferVFAFX7JH/z70v9mw/8
+8FqzRQBV/su3/wCeAo/su3/54CrVFAFb+zYf+eC0f2bD/wA8FqzRQBV+yR/8+9H2SP8A596tUUAF
+FFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFQxI7rndtXs
+BQBNRQowo/oKKACiiigAoopsjbV96AHUVD5retTUAFDMFGTwPU0UUAFIxOw7euOKWigBqOWP3WX6
+4p2aKKACiiigAooooAKRl3rjn8Dim+ePenhs0AN8lD/Cv5UHd2206igCLyG9qloooAKKKKACiiig
+AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooqvNp/nH/Wyxr3CnlvqTmgCWb7v41F9lkf/ltI
+qY+7/EPxqS1jeKELIyu/cqu0H8MnFSE4oAbFH5S4yT35p1FFAEZuFyyqdzJ1UdaPP9qkooAKKKKA
+CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIN7eppYbvzMfL8rDIdW3KfxqaigA
+B3DIooooAKM5oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAo
+oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiioY4lljDMMk0ATU1Iwhz/ABHqR3oSNY1A
+HYAe+KcWxQAU138tC3zHHoMmnc7vaigAooooAKKKKACiiigAooooAKKKKACiiigAoozmjNABRRmj
+NABRRmjNABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUZoAKKKKACignFFABRRRQAUUUUA
+FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRTZV3L
++NNithER8zMuBwcHJ/vE9c0AR2uLvEmN0ecoWHJ9x6A1YA2jA4A6CiigBrzKh25Bc9FzyadRRQAU
+UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUHpRmobo/6LQA2ka4+zivm3/goH/wU1+H3/BPH4d/2p4s
+1D+0NYuf+Qfo9t/x8Xdfil+09/wcgftAfGLXbj/hFtZs/h3ov/LtbW9p/wATAf8AXavXyzh/GYz+
+EY1q1j+j5bkDvQZga/lTtP8Agsh+039q/dfF3xl/4FwV9Gfsh/8ABzV8aPhPr1va/Ev7H8Q/Dv8A
+y8EWn2fURXo4jgzG0V+7MaOMuf0RUV4n+xd+3L4H/bj+GFv4o8E6l9otz/x8W5P+kWn/AF2r3Cvl
+5UXR0q7nYSA5FFA6UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRR
+QAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVHLF5re1JF
+EssYZhkmpQNowKAEVAmcDG45NDOEHzHH1pc0UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB
+QelFB6UAR1xfx4+LOl/Ar4SeIvGWs3H2fTPD9hNc3B9O9dpMMKK+Bf8Ag4v8Y3Xg3/gmV4qjtf8A
+mIXEFtW2Boe2r06IdD8B/wBtH9rTXv20f2gvEXjfXrm8uP7QuP8AiXW9x/y6Qf8ALGvJaKK/ccPR
+9gvYo+cYUUUV2iPpH/glr+3NrP7DP7VXh3XrW4vP7F1G4g07Wbf/AJ+4K/qf8IeKbXxl4Z0/WNPx
+Na6lbw3EB/6ZSYIr+NT7V9lr+rP/AIJJ+NZfHP8AwTx+FWq3X/HxNosMJr8345wKXssWengq19D6
+YHSigHIor4M9EKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoBzRRQAUUUUAFFFFABRR
+RQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFR/Zw0u9uWp0SbFp1AAO
+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
+/wCfQfU6J/Kda/8ABGX9pbVP9V8IfE3/AG8V0eg/8EIP2pNduv8Akmd5b/8AXxd/Z6/qOxRin/rp
+jegfU6J/Nv4X/wCDaf8AaW8UXX+lad4Z0X/r41b/AONV694F/wCDT74lancn/hI/iX4P0e3HbTrO
+e4uP1r96CBR8tcVfi7Mqo1gj8rPg5/wau/B/ws+/xZ4s8YeK7ruM/Z4Pyr63+Bn/AASP/Z6/Z+VZ
+NA+GXhv7VB/y831oLi4H519PUEZNebXzXG1v4tRmvsDO8P6DY+H7QWtjb2ljbj/ljBirtSUV5d2b
+EmKOtFFaAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF
+FABRRRQAUUUUAFFFFABRRSI25c0ALRRRQAUYoooAMUYoooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAMUYoooAMUYxRRQAYoxRRQAYoxRRQAYooooAMUYoooAKMZoooAKKKKACii
+igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKM80UUAFFFFABRRRQAUUUUAFFFFABRRRQAUU
+UUAFFFFABRRRQAUUUUAAOaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+KACiiigAooooACdoyajM33j91U6k0Trv2/PtVDkmpKACiiigAooooAKKKKACiiigAooooAKKKKAC
+iiigAooooAKKKKACiiigAooooAKKKM0AFFFFABRSK+7/AOvS0AFFFFABRRRQAUUUUAFFFFABRRRQ
+AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAB
+RRRQAUUUUAFFFFABTZZvKXozN2UdTSl8Nt70tABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQBF57e1S0UUAFFAOaKACimzDKcbv8AgJ5p1ABRRRQAUUUU
+AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA
+UUUUAFFFFABRRRQAUUUUAFMmYqAafRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABR
+RRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUxptnzMVWPH3iafRQAK24ZHI9qKrg4NL9qYuqqsc
+nGXAf5l+g7/mKAJ6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAIbkNlGBfapyVXq1TUUUAFFFFABRRRQAUUUUA
+FFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU
+UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRR
+RQAUUUUAFFFFABRQTtGTQDmgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooo
+oAKKKKACiiigAooooAKKM0ZoAKKM0ZoAKKM0ZoAKKM0ZoAKKKKACiiigAooooAKKN1G6gAoo3Ubq
+ACijdRuoAKKN1G6gAoo3Um8eooARiw+6FP1OKazSY4SP8XP+FP3j1FG4eooAUGimfaY/N8vzE8z+
+7u5/Kl85fL37l29d2eKAHUUA5FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRTXkWMfNQA6io/
+P9v1qSgAJwKKKKACiiigAooooAKKKKACiiigAooooAKKKKACijNGaACijNGaACiiigAooooAKKKK
+ACiiigCOiuL/AOGgfAf/AEPfg3/wcW//AMcp3/DQHgX/AKHHwj/4N4P/AIqr9nfYDsqK4/8A4Xt4
+L/6HLwz/AODSD/Gnf8L18F/9Dj4Z/wDBpB/jR7PyA66iuU/4Xh4N/wChx8Nf+DWD/Gl/4Xb4Q/6G
+zwz/AODWD/Go9kB1VFcr/wALt8If9DZ4Z/8ABrB/jR/wu3wh/wBDZ4Z/8GsH+NHsgOqorlf+F2+E
+P+hs8M/+DWD/ABo/4Xb4Q/6Gzwz/AODWD/Gj2QHVUVyv/C7vB/8A0OHhn/wa2/8AjSf8Lw8G/wDQ
+4+Gv/BrB/jS9kB1vy0fLXH/8L18F/wDQ4+Gf/BpB/jR/wvTwX/0OPhn/AMGkH+NaezfYDsPlo+Wu
+L/4Xv4G/6HDwh/4N7f8A+KpP+GgvAv8A0O3hL/wcW/8A8VR7PyA7X5aBtzXD/wDDQHgP/ofPBn/g
+4g/+OU3/AIaI8Bf9D54N/wDBvb//AByj2YHcUVxH/DRnw/8A+h78G/8Ag4g/+OVF/wANIfDj/ooX
+gv8A8KC3/wDjtLkqAd5RXB/8NJfDX/ooXgz/AMKG3/8AjtN/4ac+Gv8A0UbwL/4P7b/47RyVAO+o
+rz//AIaq+Gf/AEULwJ/4P7P/AOO0f8NYfC//AKKH4D/8KCz/APjtHs6gHoFFee/8NZ/DD/opPgH/
+AMKCz/8AjtL/AMNc/C3/AKKT4A/8KKz/APjtHJUA9Borzv8A4a5+Fv8A0UrwB/4UVl/8do/4a5+F
+v/RSvAH/AIUVl/8AHaPZ1APRKK87/wCGvvhZ/wBFK+H/AP4Udl/8do/4bA+FP/RSvh7/AOFHZf8A
+x2j2dQD0SmIu5sV59/w2B8Kf+ilfD3/wo7L/AOO0D9r74Vg8/Er4f/8AhR2X/wAdo9nUA9GAIHUf
+lThn/Irzr/hrv4V/9FJ8A/8AhRWX/wAdo/4a7+Ff/RSfAP8A4UVl/wDHafs5dgPRaK86/wCGu/hX
+/wBFJ8A/+FFZf/Haf/w1r8Lf+ij+A/8AwobP/wCOUezl2A9Corz3/hrP4X/9FE8C/wDhQ2f/AMdp
+3/DVnwy/6KF4H/8ACgs//jlHs5dgPQKK4P8A4ak+Gv8A0UDwT/4PbX/45TpP2mfhxIhX/hYHgkf9
+x62H8pKXs5dgO0lmYfdZV/3kNOd9o+Vs1w//AA0d8Of+h88H/wDg/t//AI5S/wDDRnw//wCh78G/
++DiD/wCOUezmB28cv9407zV9a4X/AIaI8Bf9D54N/wDBvb//AByj/hojwF/0Png3/wAG9v8A/HKr
+kA7oyqKXcK4b/hoDwH/0Pngz/wAHEH/xynf8NA+A/wDoe/Bv/g4t/wD45S5QO2JU0fLXFf8AC/8A
+wN/0PXg3/wAG1v8A/HKP+GgvAv8A0O3hL/wcW/8A8VS5Lgdr8tHy1xX/AA0F4F/6Hbwl/wCDi3/+
+Ko/4aC8C/wDQ7eEv/Bxb/wDxVP2b7Adr8tHy1xX/AA0F4F/6Hbwl/wCDi3/+Ko/4aC8C/wDQ7eEv
+/Bxb/wDxVHs32A7X5aPlriv+GgvAv/Q7eEv/AAcW/wD8VR/w0F4F/wCh28Jf+Di3/wDiqPZvsB2v
+y0fLXFf8NBeBf+h28Jf+Di3/APiqP+GgvAv/AEO3hL/wcW//AMVR7N9gO1+Wj5a4r/hoLwL/ANDt
+4S/8HFv/APFUf8NBeBf+h28Jf+Di3/8AiqPZvsB2vy0fLXF/8NAeBf8AocfCP/g3g/8AiqP+GgPA
+v/Q4+Ef/AAbwf/FU/Z+QHafLR8tcX/w0B4F/6HHwj/4N4P8A4qj/AIXv4G/6HDwh/wCDe3/+Kpez
+8gO0+Wj5a43/AIXt4L/6HLwz/wCDSD/Gnf8AC9fBf/Q4+Gf/AAaQf40ez8gOv2GjYa5L/he/gv8A
+6HHwz/4NIP8AGnf8Lu8H/wDQ4eGf/Brb/wCNZ+yA6vYaNhrmP+Fy+Ef+hq8M/wDg0g/xo/4XN4U/
+6Grw1/4NYP8AGj2YHVUVyv8Awt7wr/0NPhn/AMGkH+NS/wDC1PC//Qx6P/4GQ/40wOlorm/+Fm+G
+P+hj0b/wMh/xqT/hYXh3/oYtH/8AAyH/ABoA6Ciuf/4WDoP/AEGtH/8AA2H/ABqT/hONF/6DWk/+
+BkVAG5RWP/wmGj/9BWz/APAkf41J/wAJPpv/AEELP/wKoA//2Q==</ImageBytes>
+        <ImageTransparency>189</ImageTransparency>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="30" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>12/12/2019 6:57:58 PM</ReportChanged>
+  <ReportCreated>11/2/2019 12:43:52 PM</ReportCreated>
+  <ReportFile>A:\wpf forms\POD22\POD22\bin\Debug\Invoice_rpt.mrt</ReportFile>
+  <ReportGuid>7ed57849cf4342848fab35385a727d89</ReportGuid>
+  <ReportImage isNull="true" />
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2018.1.2.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="12">
+    <Blue_x0020_Steel_Report_Title1 Ref="31" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item29 Ref="32" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportTitle</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item29>
+      </Conditions>
+      <Font>Arial,14,Bold</Font>
+      <Name>Blue Steel_Report_Title1</Name>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title1>
+    <Blue_x0020_Steel_Report_Title2 Ref="33" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item31 Ref="34" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>ReportTitle</Placement>
+          <PlacementNestedLevel>2</PlacementNestedLevel>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item31>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Title2</Name>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Title2>
+    <Blue_x0020_Steel_Report_Summary Ref="35" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item33 Ref="36" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>ReportSummary</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item33>
+      </Conditions>
+      <Font>Arial,10,Bold</Font>
+      <Name>Blue Steel_Report_Summary</Name>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Report_Summary>
+    <Blue_x0020_Steel_Page_Header Ref="37" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item35 Ref="38" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageHeader</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item35>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Header</Name>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Header>
+    <Blue_x0020_Steel_Page_Footer Ref="39" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item37 Ref="40" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>PageFooter</Placement>
+          <Type>ComponentType, Placement</Type>
+        </Item37>
+      </Conditions>
+      <Font>Arial,10</Font>
+      <Name>Blue Steel_Page_Footer</Name>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Page_Footer>
+    <Blue_x0020_Steel_Group_Header1 Ref="41" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item39 Ref="42" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>GroupHeader</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item39>
+      </Conditions>
+      <Font>Arial,13,Bold</Font>
+      <Name>Blue Steel_Group_Header1</Name>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Header1>
+    <Blue_x0020_Steel_Group_Footer1 Ref="43" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item41 Ref="44" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>GroupFooter</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item41>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Group_Footer1</Name>
+      <TextBrush>[79:129:189]</TextBrush>
+    </Blue_x0020_Steel_Group_Footer1>
+    <Blue_x0020_Steel_Header1 Ref="45" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black;True</Border>
+      <Brush>[79:129:189]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item43 Ref="46" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Header</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item43>
+      </Conditions>
+      <Font>Arial,9.75,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Header1</Name>
+      <TextBrush>White</TextBrush>
+    </Blue_x0020_Steel_Header1>
+    <Blue_x0020_Steel_Data1 Ref="47" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item45 Ref="48" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image, CheckBox</ComponentType>
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>Data</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item45>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1>
+    <Blue_x0020_Steel_Data1_Odd_x0020_Style Ref="49" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[255:255:255]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item47 Ref="50" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataOddStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item47>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Odd Style</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Odd_x0020_Style>
+    <Blue_x0020_Steel_Data1_Even_x0020_Style Ref="51" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>None;[0:0:39];1;Solid;False;4;Black</Border>
+      <Brush>[216:216:216]</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item49 Ref="52" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <OperationPlacementNestedLevel>GreaterThanOrEqualTo</OperationPlacementNestedLevel>
+          <Placement>DataEvenStyle</Placement>
+          <Type>Placement, PlacementNestedLevel</Type>
+        </Item49>
+      </Conditions>
+      <Font>Arial,8</Font>
+      <Name>Blue Steel_Data1_Even Style</Name>
+      <TextBrush>[0:0:0]</TextBrush>
+    </Blue_x0020_Steel_Data1_Even_x0020_Style>
+    <Blue_x0020_Steel_Footer1 Ref="53" type="Stimulsoft.Report.StiStyle" isKey="true">
+      <Border>Top, Bottom;[0:0:39];2;Solid;False;4;Black</Border>
+      <Brush>White</Brush>
+      <CollectionName>Blue Steel</CollectionName>
+      <Conditions isList="true" count="1">
+        <Item51 Ref="54" type="Stimulsoft.Report.StiStyleCondition" isKey="true">
+          <ComponentType>Text, Primitive, Image</ComponentType>
+          <Placement>Footer</Placement>
+          <Type>ComponentType, Placement, PlacementNestedLevel</Type>
+        </Item51>
+      </Conditions>
+      <Font>Arial,8.25,Bold,Point,False,204</Font>
+      <Name>Blue Steel_Footer1</Name>
+      <TextBrush>Black</TextBrush>
+    </Blue_x0020_Steel_Footer1>
+  </Styles>
+</StiSerializer>

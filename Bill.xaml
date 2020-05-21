@@ -1,0 +1,87 @@
+﻿<Window x:Class="PishgamanFormsAssistant.Bill"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="Bill" Height="693.9" Width="678.8" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" WindowStyle="None">
+    <Grid Background="LightGray" Margin="0,0,-0.2,-0.4">
+        <Label Margin="273,150,255,336" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <materialDesign:PackIcon Kind="Paper" Height="227" Width="153" Foreground ="#FF3372B9" Opacity="0.5"></materialDesign:PackIcon>
+        </Label>
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF3372B9" MouseDown="Grid_MouseDown">
+            <TextBlock Text="Bill" FontFamily="rockwell" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+        </Grid>
+
+        <Label Margin="1000,65,71,416"/>
+
+
+
+        <Button Content="submit" Margin="354,0,0,17.4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="141" Click="Button_Click_1" />
+        <Button Content="close" Margin="0,0,36,17.4" HorizontalAlignment="Right" Width="66" Click="Button_Click" VerticalAlignment="Bottom" />
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="shipper :" Height="30" Margin="28,117,566,539" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="voyage no. :" Height="30" Margin="28,300,566,356" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="gross weight:" Height="26" Margin="145,412,449,248" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="shipper's description of goods:" Height="30" Margin="41,375,444,281" Foreground="#FF395288" FontWeight="Bold" Width="194"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of delivery :" Height="26" Margin="313,258,258,410.4" Foreground="#FF395288" FontWeight="Bold" Width="108" RenderTransformOrigin="0.497,0.467">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="1.58"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.347"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of discharge :" Height="26" Margin="302,333,264,335.4" Foreground="#FF395288" FontWeight="Bold" Width="113"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of loading:" Height="30" Margin="315,294,264,370.4" Foreground="#FF395288" FontWeight="Bold" Width="100"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Shipper's Address :" Height="27" Margin="23,181,539,478" Foreground="#FF395288" FontWeight="Bold" Width="117"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="TEL :" Height="25" Margin="145,117,453,544" Foreground="#FF395288" FontWeight="Bold" Width="81" RenderTransformOrigin="0.502,0.52"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="consignee:" Height="30" Margin="389,120,205,536" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="TEL:" Height="30" Margin="505,120,102,536" Foreground="#FF395288" FontWeight="Bold" Width="72"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="notify address:" Height="30" Margin="389,181,189,475" Foreground="#FF395288" FontWeight="Bold" Width="101"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="vessel :" Height="24" Margin="34,252,594,410" Foreground="#FF395288" FontWeight="Bold" Width="51"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="address :" Height="30" Margin="67,567,548,97.4" Foreground="#FF395288" FontWeight="Bold" Width="64"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="B/L no.:  PIS/" Height="30" Margin="212,85,382,571" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Time used loading:" Height="30" Margin="41,465,521,199.4" Foreground="#FF395288" FontWeight="Bold" Width="117"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="place and date of issue :" Height="30" Margin="302,465,232,199.4" Foreground="#FF395288" FontWeight="Bold" Width="145"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Name of agent at port of discharge :" Height="30" Margin="55,532,409,132.4" Foreground="#FF395288" FontWeight="Bold" Width="215"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="phone and tel :" Height="30" Margin="61,602,521,62.4" Foreground="#FF395288" FontWeight="Bold" Width="97"/>
+        <TextBox x:Name="shipper_txt" TabIndex="2" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="34,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED"/>
+        <TextBox x:Name="shiper_ad_txt" TabIndex="4" HorizontalAlignment="Left" Height="24" Margin="34,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" Background="#FFF6EDED"/>
+        <TextBox x:Name="ship_tel_txt" TabIndex="3" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="154,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED"/>
+        <TextBox x:Name="con_txt" MaxLength="50" TabIndex="5" HorizontalAlignment="Left" Height="24" Margin="389,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED"/>
+        <TextBox x:Name="con_tel_txt" MaxLength="50" TabIndex="6" HorizontalAlignment="Left" Height="24" Margin="505,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED"/>
+        <TextBox x:Name="noti_txt" TabIndex="7" HorizontalAlignment="Left" Height="24" Margin="392,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219" Background="#FFF6EDED"/>
+        <TextBox x:Name="del_txt" TabIndex="10" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="424,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Background="#FFF6EDED"/>
+        <TextBox x:Name="load_txt"  TabIndex="11" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="424,294,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Background="#FFF6EDED"/>
+        <TextBox x:Name="dis_txt" TabIndex="12" MaxLength="50" HorizontalAlignment="Left" Height="28" Margin="424,333,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Background="#FFF6EDED"/>
+        <TextBox x:Name="vesel_txt" TabIndex="8" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="97,259,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163" Background="#FFF6EDED"/>
+        <TextBox x:Name="goods_txt" TabIndex="13"  HorizontalAlignment="Left" Height="24" Margin="240,375,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="371" Background="#FFF6EDED"/>
+        <TextBox x:Name="gross_txt" TabIndex="14" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="240,412,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="voyage_txt" TabIndex="9" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="126,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="bl_txt" TabIndex="1"  MaxLength="50" HorizontalAlignment="Left" Height="30" Margin="302,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" Background="#FFF6EDED"/>
+        <TextBox x:Name="timeload_txt" TabIndex="15" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="164,465,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="place_issue_txt" TabIndex="16" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="452,465,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="agent_dis_txt" TabIndex="18" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="275,537,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="agent_add_txt" TabIndex="19" HorizontalAlignment="Left" Height="24" Margin="131,567,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="343" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <TextBox x:Name="agent_phone" TabIndex="20" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="164,602,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <Button Click="Button_Click_2" Content="Delete pervious information " Margin="41,0,0,17.4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="230" />
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Captain :" Height="30" Margin="67,500,548,164.4" Foreground="#FF395288" FontWeight="Bold" Width="64"/>
+        <TextBox x:Name="cpt_txt" TabIndex="17" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="136,503,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="235" Background="#FFF6EDED" RenderTransformOrigin="0.504,0.458"/>
+        <Image x:Name="imagesub" HorizontalAlignment="Left" Height="35" Source="img/TICK.png" Visibility="Hidden" Margin="505,645,0,0" VerticalAlignment="Top" Width="41"/>
+
+        <Image x:Name="imageDel" Source="img/DELETE.png" HorizontalAlignment="Left" Visibility="Hidden" Height="34" Margin="275,645,0,0" VerticalAlignment="Top" Width="48"/>
+
+    </Grid>
+</Window>

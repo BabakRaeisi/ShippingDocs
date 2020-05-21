@@ -1,0 +1,86 @@
+﻿<Window x:Class="PishgamanFormsAssistant.DeliveryOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="Delivery Order" Height="566.4" Width="811.2" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen"  Activated="Window_Activated" Loaded="Window_Loaded" Topmost="True" >
+    <Grid Background="LightGray">
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF3372B9" MouseDown="Grid_MouseDown">
+            <TextBlock Text="Delivery Order" FontFamily="Rockwell" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+        </Grid>
+
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="5" Margin="102,181,0,0" VerticalAlignment="Top" Width="0"/>
+        <Grid HorizontalAlignment="Left" Height="267" Margin="498,111,0,0" VerticalAlignment="Top" Width="292">
+            <Label  Margin="61,10,0,63">
+                <materialDesign:PackIcon Kind="LorryDelivery"  Height="196" Width="242" Foreground="#FF7C9CC1"/>
+
+            </Label>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="274" Margin="68,235,0,0" VerticalAlignment="Top" Width="683">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="438*"/>
+                <ColumnDefinition Width="245*"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid x:Name="invoice_datagrid" ContextMenuOpening="Invoice_datagrid_ContextMenuOpening" AutomationProperties.IsColumnHeader="True" HorizontalAlignment="Left" Height="254" Margin="28,10,0,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="614" Grid.ColumnSpan="2">
+                <DataGrid.Background>
+                    <SolidColorBrush Color="#FF303030" Opacity="0.8"/>
+                </DataGrid.Background>
+                <DataGrid.Foreground>
+                    <SolidColorBrush Color="#DDFFFFFF" Opacity="0.5"/>
+                </DataGrid.Foreground>
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Containers and Marks"  Binding="{Binding container_marks}" />
+                    <DataGridTextColumn Header="Description of Goods" Binding="{Binding des_goods}" />
+                    <DataGridTextColumn Header="Gross Weight" Binding="{Binding gross}" />
+
+
+
+
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+
+                    <ContextMenu>
+                        <MenuItem Header="Delete" Click="MenuItem_Click"></MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+            </DataGrid>
+        </Grid>
+
+        <Button Content="close" Margin="624,514,85.2,20.4" Click="close_Click"/>
+        <Button Content="Add and Submit" Margin="371,514,255.2,20.4" Click="ADd_Click" />
+        <Button x:Name="submit_info" Content="submit info" HorizontalAlignment="Left" Margin="561,212,0,0" VerticalAlignment="Top" Width="130" Click="Submit_info_Click"/>
+        <Button x:Name="del_rows" Content="Delete all rows" HorizontalAlignment="Left" Margin="60,514,0,0" VerticalAlignment="Top" Width="192" Click="Del_rows_Click"/>
+        <Button x:Name="del_info" Content="Delete pervious info" HorizontalAlignment="Left" Margin="243,212,0,0" VerticalAlignment="Top" Width="222" Click="Del_info_Click"/>
+        <Image x:Name="image_tick" HorizontalAlignment="Left" Height="34" Margin="696,212,0,0"  VerticalAlignment="Top" Width="30" Source="img/TICK.png" Visibility="Hidden"/>
+        <Image x:Name="image_del" HorizontalAlignment="Left" Height="30" Margin="470,214,0,0" VerticalAlignment="Top" Width="28" Source="img/delete.png" Visibility="Hidden"/>
+        <Label x:Name="label" Content="*** لطفا تمامی فیلدها را پر کنید ***" Foreground="Red" Visibility="Hidden" HorizontalAlignment="Left" Margin="503,181,0,0" VerticalAlignment="Top" Width="193" Height="31"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Date:" Height="25" Margin="76,70,692.2,471.4" Foreground="#FF395288" FontWeight="Bold" Width="43"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Good description:" Height="30" Margin="371,100,329.2,436.4" Foreground="#FF395288" FontWeight="Bold" Width="111"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Final Destination:" Height="27" Margin="371,70,329.2,469.4" Foreground="#FF395288" FontWeight="Bold" Width="111"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="B/L no. :" Height="26" Margin="230,68,525.2,472.4" Foreground="#FF395288" FontWeight="Bold" Width="56"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Vessel:" Height="24" Margin="230,100,525.2,442.4" Foreground="#FF395288" FontWeight="Bold" Width="56"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="The Director of customs:" Height="30" Margin="76,136,586.2,400.4" Foreground="#FF395288" FontWeight="Bold" Width="149"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Voyage:" Height="26" Margin="63,100,692.2,440.4" Foreground="#FF395288" FontWeight="Bold" Width="56"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Gross unit:" Height="23" Margin="410,130,329.2,413.4" Foreground="#FF395288" FontWeight="Bold" Width="72"/>
+        <TextBox x:Name="date_text" TabIndex="1" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="119,73,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95" Background="#FFF6EDED"/>
+        <TextBox x:Name="Bl_txt" TabIndex="2" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="291,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="73" Background="#FFF6EDED"/>
+        <TextBox x:Name="unit_txt" TabIndex="8" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="498,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="104" Background="#FFF6EDED"/>
+        <TextBox x:Name="voyage_txt" TabIndex="3" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="119,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95" Background="#FFF6EDED"/>
+        <TextBox x:Name="vessel_txt" TabIndex="4" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="291,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="73" Background="#FFF6EDED"/>
+        <TextBox x:Name="final_des_txt" TabIndex="6" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="498,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="87" Background="#FFF6EDED"/>
+        <TextBox x:Name="good_des_txt" TabIndex="7" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="498,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239" Background="#FFF6EDED"/>
+        <TextBox x:Name="director_txt" TabIndex="5" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="230,136,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="134" Background="#FFF6EDED"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="expiration date:" Height="27" Margin="127,166,581.2,373.4" Foreground="#FF395288" FontWeight="Bold" Width="103"/>
+        <TextBox x:Name="expiry_txt" TabIndex="8" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="230,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="94" Background="#FFF6EDED"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="PishgamanFormsAssistant.manifest_add"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="Add manifest info" Background="LightGray" Height="380.468" Width="512.296" WindowStyle="None" WindowStartupLocation="CenterScreen" Topmost="True">
+    <Grid Background="#FF3372B9" Height="49" VerticalAlignment="Top" Margin="0,0,-0.2,0" MouseDown="Grid_MouseDown">
+        <TextBlock Text="Manifest" FontFamily="Rockwell" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="White"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="BL no. :" Height="30" Margin="12,77,327.8,-58" Foreground="#FF395288" FontWeight="Bold" Width="168"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Consignee:" Height="30" Margin="279,77,71.8,-58" Foreground="#FF395288" FontWeight="Bold" Width="157"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Shipper :" Height="30" Margin="279,148,143.8,-129" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Button x:Name="submit"  Content="Add" HorizontalAlignment="Left" Click="Submit_Click" Height="37" Margin="129,329,0,-317" VerticalAlignment="Top" Width="94"/>
+        <Button x:Name="close" Click="Close_Click"  Content="Close" HorizontalAlignment="Left" Height="37" Margin="270,329,0,-317" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="bl_text" TabIndex="1" HorizontalAlignment="Left" Height="24" Margin="27,107,0,-82" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="115" Background="#FFF6EDED"/>
+        <TextBox x:Name="shipper_text" TabIndex="5" HorizontalAlignment="Left" Height="24" Margin="289,178,0,-153" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <TextBox x:Name="consignee_text" TabIndex="2" HorizontalAlignment="Left" Height="24" Margin="289,107,0,-82" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Weight :" Height="30" Margin="12,148,433.8,-129" Foreground="#FF395288" FontWeight="Bold" Width="62"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="marks and remarks :" Height="30" Margin="12,227,365.8,-208" Foreground="#FF395288" FontWeight="Bold" Width="130"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="description :" Height="30" Margin="279,227,71.8,-208" Foreground="#FF395288" FontWeight="Bold" Width="157"/>
+        <TextBox x:Name="weight_text" TabIndex="3" HorizontalAlignment="Left" Height="24" Margin="27,178,0,-153" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PreviewTextInput="weight_text_PreviewTextInput" Width="115" Background="#FFF6EDED"/>
+        <TextBox x:Name="marks_text" TabIndex="6" HorizontalAlignment="Left" Height="24" Margin="27,257,0,-232" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <TextBox x:Name="description_tetxt" TabIndex="7" HorizontalAlignment="Left" Height="24" Margin="289,257,0,-232" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <Label x:Name="label" Foreground="Red" Content="*** لطفا تمامی فیلدها را پر کنید ***" Visibility="Hidden" HorizontalAlignment="Left" Height="26" Margin="157,298,0,-275" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="weight_unit" TabIndex="4"  HorizontalAlignment="Left" Height="24" Margin="147,178,0,-153" TextWrapping="Wrap" Foreground="Gray" TextAlignment="Center" Text="weight unit" VerticalAlignment="Top" Width="76" Background="#FFF6EDED"/>
+    </Grid>
+</Window>
+

@@ -1,0 +1,100 @@
+﻿<Window x:Class="PishgamanFormsAssistant.CargoDeclearation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="CargoDeclearation" Height="576.702" Width="805.759" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Topmost="True" Activated="Window_Activated">
+    <Grid Background="LightGray">
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF3372B9">
+            <TextBlock Text="اظهارنامه كالا " FontFamily="Garamond" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"/>
+        </Grid>
+
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="5" Margin="102,181,0,0" VerticalAlignment="Top" Width="0"/>
+        <Grid HorizontalAlignment="Left" Height="267" Margin="498,111,0,0" VerticalAlignment="Top" Width="292">
+            <StackPanel Orientation="Horizontal" Margin="68,-25,0,63">
+                <materialDesign:PackIcon Kind="Transcribe"  Height="196" Width="242" Foreground="#FF7C9CC1" Margin="0,51,0,-17.8"/>
+
+            </StackPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="188" Margin="423,65,0,0" VerticalAlignment="Top" Width="289">
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Flag of ship :" Height="30" Margin="25,16,169,142" Foreground="#FF395288" FontWeight="Bold" Width="95"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Master's name :" Height="30" Margin="0,51,184,107" Foreground="#FF395288" FontWeight="Bold" Width="105"/>
+            <TextBox x:Name="flag_text" TabIndex="5" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="125,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="masters" MaxLength="50" TabIndex="6" HorizontalAlignment="Left" Height="24" Margin="125,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of loading :" Height="30" Margin="10,86,121,72" Foreground="#FF395288" FontWeight="Bold" Width="158"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of discharge :" Height="30" Margin="5,126,121,32" Foreground="#FF395288" FontWeight="Bold" Width="163"/>
+            <TextBox x:Name="lastport" MaxLength="50"  TabIndex="7" HorizontalAlignment="Left" Height="24" Margin="125,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="dateAD" MaxLength="50" HorizontalAlignment="Left" Height="24" TabIndex="8" Margin="125,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <Label x:Name="label" Content="*** لطفا تمامی فیلدها را پر کنید***" Visibility="Hidden" Foreground="Red" HorizontalAlignment="Left" Margin="50,150,-58,0" VerticalAlignment="Top" Width="297"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="188" Margin="28,65,0,0" VerticalAlignment="Top" Width="319">
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="CALL SIGN :" Height="30" Margin="10,10,224,148" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="NAME OF SHIP :" Height="30" Margin="10,51,203,107" Foreground="#FF395288" FontWeight="Bold" Width="106"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="IMO no. :" Height="30" Margin="10,91,224,67" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+            <TextBox x:Name="ship_name" TabIndex="2" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="121,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="IMO_num" MaxLength="11"  TabIndex="3" PreviewTextInput="IMO_num_PreviewTextInput" HorizontalAlignment="Left" Height="24" Margin="121,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port where report is made :" Height="30" Margin="10,130,146,28" Foreground="#FF395288" FontWeight="Bold" Width="163"/>
+            <TextBox x:Name="portAD" MaxLength="50" TabIndex="4" HorizontalAlignment="Left" Height="24" Margin="178,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+        </Grid>
+        <TextBox x:Name="call_sign_txt" MaxLength="50" TabIndex="1" HorizontalAlignment="Left" Height="24" Margin="148,77,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+        <Grid HorizontalAlignment="Left" Height="282" Margin="80,236,0,0" VerticalAlignment="Top" Width="667">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="657*"/>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid AutoGenerateColumns="False"  ScrollViewer.HorizontalScrollBarVisibility="Visible" x:Name="cargo_datagrid" HorizontalAlignment="Left" Height="234" Margin="10,38,0,0" VerticalAlignment="Top" Width="594" Grid.ColumnSpan="2" AutomationProperties.IsColumnHeader="True" ContextMenuOpening="Cargo_datagrid_ContextMenuOpening">
+
+                <DataGrid.Background>
+                    <SolidColorBrush Color="#FF303030" Opacity="0.8"/>
+                </DataGrid.Background>
+                <DataGrid.Foreground>
+                    <SolidColorBrush Color="#DDFFFFFF" Opacity="0.5"/>
+                </DataGrid.Foreground>
+                <DataGrid.Columns >
+
+                    <materialDesign:MaterialDataGridTextColumn Header="ID" Binding="{Binding Id}" />
+                    <materialDesign:MaterialDataGridTextColumn Header="علائم وشماره" Binding="{Binding alaem_va_shomareha}" />
+                    <materialDesign:MaterialDataGridTextColumn Header="گیرنده ی کالا" Binding="{Binding kala_girande}"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="شرح کالا" Binding="{Binding sharh_kala}"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="نوع بسته" Binding="{Binding noe_baste}"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="اندازه" Binding="{Binding andaze}"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="وزن ناخالص" Binding="{Binding vazn_nakhales}"/>
+                    <materialDesign:MaterialDataGridTextColumn Header="تعداد" Binding="{Binding tedad}"/>
+
+
+
+
+                </DataGrid.Columns >
+                <DataGrid.ContextMenu>
+
+                    <ContextMenu>
+                        
+                        <MenuItem Header="Delete" Click="delete_Click" ></MenuItem>
+                        
+                    </ContextMenu>
+
+                </DataGrid.ContextMenu>
+
+
+            </DataGrid>
+            <Button x:Name="submit_info" Content="Submit info" Grid.Column="1" HorizontalAlignment="Left" Margin="509.2,0,0,0" VerticalAlignment="Top" Width="113" Click="Submit_info_Click"/>
+            <Button x:Name="DEl_info" Content="Delete pervious info" Grid.Column="1" Click="DEl_info_Click" HorizontalAlignment="Left" Margin="224.2,0,0,0" VerticalAlignment="Top" Width="172"/>
+            <Button x:Name="DEl_all" Content="Delete all rows" HorizontalAlignment="Left" Margin="10,288,0,-38" VerticalAlignment="Top" Width="128" Grid.ColumnSpan="2" Click="DEl_all_Click"/>
+
+        </Grid>
+        <Button Content="close" Margin="606,523,93.6,21.8" Click="Button_Click" />
+        <CheckBox x:Name="Dcheck" Content="Departure" HorizontalAlignment="Left" Height="30" Margin="41,236,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF395288" FontWeight="Bold" IsChecked="False"/>
+        <CheckBox x:Name="Acheck" Content="Arrival" HorizontalAlignment="Left" Height="30" Margin="148,236,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF395288" FontWeight="Bold" IsChecked="False"/>
+        <Button Content="Add and Submit" Margin="331,523,302.6,21.8" Click="Button_Click_1" />
+        <TextBox x:Name="txtblck_AD" HorizontalAlignment="Left" Height="23" Margin="219,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Visibility="Collapsed"/>
+        <Image x:Name="TICK_img" HorizontalAlignment="Left" Source="img\TICK.png" Height="35" Margin="717,236,0,0" VerticalAlignment="Top" Visibility="Hidden"  Width="39"/>
+        <Image x:Name="Del_img" HorizontalAlignment="Left" Source="img\DELETE.png" Height="30" Margin="498,236,0,0" VerticalAlignment="Top" Visibility="Hidden" Width="30"/>
+
+
+
+    </Grid>
+</Window>

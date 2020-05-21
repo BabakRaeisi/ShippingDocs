@@ -1,0 +1,33 @@
+﻿<Window x:Class="PishgamanFormsAssistant.Crew_add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        mc:Ignorable="d"
+        Title="Add New Crew" Background="LightGray" Height="472.387" Width="519.096" WindowStyle="None" WindowStartupLocation="CenterScreen" Topmost="True" Loaded="Window_Loaded">
+    <Grid Background="#FF3372B9" Height="49" VerticalAlignment="Top" Margin="0,0,-0.2,0" MouseDown="Grid_MouseDown">
+        <TextBlock Text="Crew" FontFamily="Rockwell" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="White"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="family name , given name :" Height="30" Margin="20,78,319.8,-59" Foreground="#FF395288" FontWeight="Bold" Width="168"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="date of birth :" Height="30" Margin="279,130,71.8,-111" Foreground="#FF395288" FontWeight="Bold" Width="157"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="nationality :" Height="30" Margin="20,142,402.8,-123" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="ranking or rating:" Height="30" Margin="279,78,118.8,-59" Foreground="#FF395288" FontWeight="Bold" Width="110"/>
+        <Button x:Name="submit"  Content="Add" HorizontalAlignment="Left" Height="37" Margin="131,404,0,-392" VerticalAlignment="Top" Width="94" Click="Add_Click"/>
+        <Button x:Name="close" Click="Close_Click" Content="Close" HorizontalAlignment="Left" Height="37" Margin="279,404,0,-392" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="name_text" MaxLength="50" TabIndex="1" HorizontalAlignment="Left" Height="24" Margin="30,108,0,-83" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" Background="#FFF6EDED"/>
+        <TextBox x:Name="rank_text" MaxLength="50" TabIndex="2" HorizontalAlignment="Left" Height="24" Margin="289,108,0,-83" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Background="#FFF6EDED"/>
+        <TextBox x:Name="nationality_text" TabIndex="3" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="30,172,0,-147" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="74" Background="#FFF6EDED"/>
+        <TextBox x:Name="datebirth_text" MaxLength="50" TabIndex="4" HorizontalAlignment="Left" Height="24" Margin="289,160,0,-135" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="CDC no. :" Height="30" Margin="30,244,423.6,-225" Foreground="#FF395288" FontWeight="Bold" Width="61"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="date of expiry CDC :" Height="30" Margin="279,244,98.8,-225" Foreground="#FF395288" FontWeight="Bold" Width="130"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="passport no. :" Height="30" Margin="23,311,398.6,-292" Foreground="#FF395288" FontWeight="Bold" Width="93"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="date of passport expiry :" Height="30" Margin="279,311,78.6,-292" Foreground="#FF395288" FontWeight="Bold" Width="157"/>
+        <TextBox x:Name="cdcNUM_text" MaxLength="50" TabIndex="6" HorizontalAlignment="Left" Height="24" Margin="38,274,0,-249" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" Background="#FFF6EDED" />
+        <TextBox x:Name="CDCExpiry_text" TabIndex="7" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="289,274,0,-249" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <TextBox x:Name="passportNum_text" MaxLength="50" TabIndex="8" HorizontalAlignment="Left" Height="24" Margin="38,341,0,-316" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" Background="#FFF6EDED"/>
+        <TextBox x:Name="passport_expiry_tetxt" MaxLength="50" TabIndex="9" HorizontalAlignment="Left" Height="24" Margin="289,341,0,-316" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="place of birth :" Height="30" Margin="279,189,71.8,-170" Foreground="#FF395288" FontWeight="Bold" Width="157"/>
+        <TextBox x:Name="placebirth_text" TabIndex="5" MaxLength="50" HorizontalAlignment="Left" Height="24" Margin="289,220,0,-195" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" Background="#FFF6EDED"/>
+        <Label x:Name="label" Content="*** لطفا تمامی فیلدها را پر کنید ***" Visibility="Hidden" Foreground="Red" HorizontalAlignment="Left" Height="31" Margin="131,370,0,-352" VerticalAlignment="Top" Width="187"/>
+    </Grid>
+</Window>

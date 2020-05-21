@@ -1,0 +1,85 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:PishgamanFormsAssistant"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="PishgamanFormsAssistant.Manifest"
+        mc:Ignorable="d"
+        Title="Manifest" Height="664.4" Width="811.2" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" Topmost="True" Activated="Window_Activated">
+    <Grid Background="LightGray">
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF3372B9" MouseDown="Grid_MouseDown">
+            <TextBlock Text="Manifest" FontFamily="Rockwell" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="White"/>
+        </Grid>
+
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="5" Margin="102,181,0,0" VerticalAlignment="Top" Width="0"/>
+        <Grid HorizontalAlignment="Left" Height="267" Margin="498,111,0,0" VerticalAlignment="Top" Width="292">
+            <StackPanel Orientation="Horizontal" Margin="68,-25,0,63">
+                <materialDesign:PackIcon Kind="Show"  Height="196" Width="242" Foreground="#FF7C9CC1" Margin="0,51,0,-17.8"/>
+
+            </StackPanel>
+        </Grid>
+
+
+
+        <Grid HorizontalAlignment="Left" Height="191" Margin="10,65,0,0" VerticalAlignment="Top" Width="780">
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Master :" Height="30" Margin="29,10,682,151" Foreground="#FF395288" FontWeight="Bold" Width="69"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="from port of :" Height="30" Margin="0,45,682,116" Foreground="#FF395288" FontWeight="Bold" Width="98"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="port of :" Height="30" Margin="29,75,682,86" Foreground="#FF395288" FontWeight="Bold" Width="69"/>
+            <TextBox x:Name="master_text" TabIndex="1" HorizontalAlignment="Left" Height="24" Margin="113,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="PortOf_text" TabIndex="3" HorizontalAlignment="Left" Height="24" Margin="113,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="general manifest loaded on board :" Height="30" Margin="280,81,288,80" Foreground="#FF395288" FontWeight="Bold" Width="212"/>
+            <TextBox x:Name="Date_text" TabIndex="4" HorizontalAlignment="Left" Height="24" Margin="508,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="voyageNo_text" TabIndex="5" PreviewTextInput="VoyageNo_text_PreviewTextInput" HorizontalAlignment="Left" Height="24" Margin="508,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <TextBox x:Name="GeneralManifest_text" TabIndex="6" HorizontalAlignment="Left" Height="24" Margin="508,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Date :" Height="30" Margin="442,10,288,151" Foreground="#FF395288" FontWeight="Bold" Width="50"/>
+            <Label  HorizontalAlignment="Center" VerticalAlignment="Center" Content="Voyage no. :" Height="30" Margin="407,45,288,116" Foreground="#FF395288" FontWeight="Bold" Width="85"/>
+            <Label x:Name="label" Content="*** لطفا تمامی فیلدها را پر کنید ***" Visibility="Hidden" Foreground="Red" HorizontalAlignment="Left" Margin="338,122,0,0" VerticalAlignment="Top" Width="194"/>
+
+        </Grid>
+        <TextBox x:Name="FromPort_text" TabIndex="2" HorizontalAlignment="Left" Height="24" Margin="124,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" Background="#FFF6EDED" RenderTransformOrigin="0.495,0.496"/>
+        <Grid HorizontalAlignment="Left" Height="362" Margin="80,236,0,0" VerticalAlignment="Top" Width="675">
+
+            <DataGrid x:Name="manifest_datagrid" HorizontalAlignment="Left" ContextMenuOpening="Manifest_datagrid_ContextMenuOpening" Height="328" Margin="28,24,0,0" AutoGenerateColumns="False" VerticalAlignment="Top" Width="609">
+                <DataGrid.Background>
+                    <SolidColorBrush Color="#FF303030" Opacity="0.8"/>
+                </DataGrid.Background>
+                <DataGrid.Foreground>
+                    <SolidColorBrush Color="#DDFFFFFF" Opacity="0.5"/>
+                </DataGrid.Foreground>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="BL no. " Binding="{Binding BL_no}"/>
+                    <DataGridTextColumn Header="Weight " Binding="{Binding weight}"/>
+                    <DataGridTextColumn Header="Mark and Remark " Binding="{Binding mark_remark}"/>
+                    <DataGridTextColumn Header="Consignee " Binding="{Binding consignee}"/>
+                    <DataGridTextColumn Header="Shipper " Binding="{Binding shipper}"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding description}"/>
+
+
+
+
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Header="Delete" Click="MenuItem_Click" ></MenuItem>
+                    </ContextMenu>
+
+                </DataGrid.ContextMenu>
+
+
+            </DataGrid>
+        </Grid>
+        <Button Content="close" Margin="606,603,104.2,29.4" Click="Button_Click" />
+        <Button Content="Add and Submit" Margin="361,603,273.2,29.4" Click="Button_Click_1"/>
+        <Button x:Name="sub_info" Content="Submit Info" Click="Sub_info_Click" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="136" Margin="402,214,0,0"/>
+        <Button x:Name="Del_info" Content="Delete pervious Info" Click="Del_info_Click" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="179" Margin="156,214,0,0"/>
+        <Image x:Name="imgsub" HorizontalAlignment="Left" Source="img\TICK.png" Height="32" Visibility="Hidden" VerticalAlignment="Top" Width="31" Margin="543,214,0,0" RenderTransformOrigin="0.465,0.513"/>
+        <Image x:Name="imgdel" HorizontalAlignment="Left" Source="img\DELETE.png" Height="30" Visibility="Hidden" VerticalAlignment="Top" Width="30" Margin="340,214,0,0"/>
+        <Button x:Name="Del_rows" Content="Delete All Rows" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Del_rows_Click" Width="150" Margin="80,603,0,0"/>
+
+
+
+    </Grid>
+</Window>
